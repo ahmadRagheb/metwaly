@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include metwaly *.css
+recursive-include metwaly *.csv
+recursive-include metwaly *.html
+recursive-include metwaly *.ico
+recursive-include metwaly *.js
+recursive-include metwaly *.json
+recursive-include metwaly *.md
+recursive-include metwaly *.png
+recursive-include metwaly *.py
+recursive-include metwaly *.svg
+recursive-include metwaly *.txt
+recursive-exclude metwaly *.pyc
