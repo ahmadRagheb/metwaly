@@ -13,10 +13,8 @@ import base64
 
 def jv_naming_based_on_company(doc,method):
 	series = frappe.get_value("Company",doc.company,"journal_entry_naming_series")
-	frappe.msgprint(series)	
 	if series:
 		doc.naming_series=series
-		frappe.msgprint("naming series "+doc.naming_series)
 	else:
 		frappe.msgprint("No naming_series found in Company {}".format(doc.company))
 
@@ -30,7 +28,6 @@ def company_updates_jv(doc,method):
 		options = naming_series.split("\n")
 		if company_jv_series not in options:
 			options.append(company_jv_series)
-			frappe.msgprint(options)
 			update_series(options)
 
 
@@ -93,6 +90,3 @@ def set_series_for(doctype, ol):
 			ps.save()
 
 	frappe.clear_cache(doctype=doctype)
-
-def ping():
-	print("PONG")
