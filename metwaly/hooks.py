@@ -129,3 +129,5 @@ doc_events = {
 # 	"frappe.desk.doctype.event.event.get_events": "metwaly.event.get_events"
 # }
 
+fixtures = ["Custom Script","Custom Field"]
+
